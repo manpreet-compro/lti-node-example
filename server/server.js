@@ -58,7 +58,7 @@ registerPlatform(
   'iHWWba8g6k36JAi',
   'https://test-lti.moodlecloud.com/mod/lti/auth.php',
   'https://test-lti.moodlecloud.com/mod/lti/token.php',
-  'https://lti-node.localtunnel.me/project/submit',
+  'https://lti-node.herokuapp.com/project/submit',
   { method: 'JWK_SET', key: 'https://test-lti.moodlecloud.com/mod/lti/certs.php' }
 );
 
