@@ -42,7 +42,7 @@ app.set("view engine", "ejs");
 
 /** Setup MongoDB to store Platform data
 */
-mongoose.connect('mongodb://localhost:27017/TESTLTI', {
+mongoose.connect('mongodb://dbuser:dbpassword1@ds051720.mlab.com:51720/testlti', {
   useNewUrlParser: true, 
 },
   (err) => {
@@ -53,13 +53,13 @@ mongoose.connect('mongodb://localhost:27017/TESTLTI', {
 mongoose.Promise = Promise;
 
 registerPlatform(
-  'https://demo.moodle.net',
+  'https://test-lti.moodlecloud.com',
   'moodle',
-  '2ITIeerRc3T57WZ',
-  'https://demo.moodle.net/mod/lti/auth.php',
-  'https://demo.moodle.net/mod/lti/token.php',
-  'https://piedpiper3.localtunnel.me/project/submit',
-  { method: 'JWK_SET', key: 'https://demo.moodle.net/mod/lti/certs.php' }
+  'iHWWba8g6k36JAi',
+  'https://test-lti.moodlecloud.com/mod/lti/auth.php',
+  'https://test-lti.moodlecloud.com/mod/lti/token.php',
+  'https://lti-node.localtunnel.me/project/submit',
+  { method: 'JWK_SET', key: 'https://test-lti.moodlecloud.com/mod/lti/certs.php' }
 );
 
 app.get('/publickey/:name', async (req, res) => {
