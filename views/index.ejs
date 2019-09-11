@@ -104,7 +104,7 @@
   }
 
   document.getElementById('get-token').addEventListener('click', async _ => {
-    fetch('http://localhost:3000/oauth2/token', {
+    fetch('oauth2/token', {
       'method': 'post',
       'headers': { 'content-type': 'application/json' },
       'body': JSON.stringify({
