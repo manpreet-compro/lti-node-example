@@ -62,6 +62,16 @@ registerPlatform(
   { method: 'JWK_SET', key: 'https://test-lti.moodlecloud.com/mod/lti/certs.php' }
 );
 
+registerPlatform(
+  'https://lti-ri.imsglobal.org',
+  'moodle',
+  '123456',
+  'https://lti-ri.imsglobal.org/platforms/461/authorizations/new',
+  'https://lti-ri.imsglobal.org/platforms/461/access_tokens',
+  'https://lti-node.herokuapp.com/project/submit',
+  { method: 'JWK_SET', key: 'https://lti-ri.imsglobal.org/platforms/461/platform_keys/458.json' }
+);
+
 app.get('/publickey/:name', async (req, res) => {
   let publicKey = await Database.GetKey(
     'platforms',
